@@ -6,9 +6,9 @@
 			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
 			  crossorigin="anonymous"></script>
         <script src="jquery.js"></script>
+        <link rel="stylesheet" href="styles.css">
         <meta charset="UTF-8">
         <title>Citas Armor Penetration Calculator TBC</title>
-        <link rel="stylesheet" href="styles.css">
     </head>
 
 <body>
@@ -26,41 +26,94 @@
             </select>   
         </label>
     </fieldset>
+    <fieldset>
         <p>Standard Raid Debuffs</p>
         <div class="raidDebuffs">
-            <div class="sunderExpose" style="display: table-cell">
+            <div class="sunderExpose" id="sunderExpose" style="display: table-cell">
                 <label>
-                    <input id="sunderArmor" value="2600" type="checkbox" name="rogwarr"/>
+                    <input id="sunderArmor"  value="2600" type="checkbox" class="rogwarr" name="armorShredder" shred-amount="2600"/>
                     Sunder Armor (2600)
                 </label>
                 <label>
-                    <input id="impExposeArmor" value="3075" type="checkbox" name="rogwarr"/>
+                    <input id="impExposeArmor" value="3075" type="checkbox" class="rogwarr" name="armorShredder" shred-amount="3075"/>
                     Improved Expose Armor (3075)
                 </label>
             </div>
             <div class="cor" style="display: table-cell">
                 <label>
-                    <input id="curseOfReckFour" value="640" type="checkbox" name="cor"/>
+                    <input id="curseOfReckFour" value="640" type="checkbox" class="curseReck" name="armorShredder" shred-amount="640"/>
                     Curse of Recklessness (Rank 4) (640)
                 </label>
                 <label>
-                    <input id="curseOfReckFive" value="800" type="checkbox" name="cor"/>
+                    <input id="curseOfReckFive" value="800" type="checkbox" class="curseReck" name="armorShredder" shred-amount="800"/>
                     Curse of Recklessness (Rank 5) (800)
                 </label>
             </div>
             <div class="faerieFire" style="display: table-cell">
                 <label>
-                    <input id="faerieFire" value="610" type="checkbox" name="faerieFire"/>
+                    <input id="faerieFire" value="610" type="checkbox" name="armorShredder" shred-amount="610"/>
                     Faerie Fire (610)
                 </label>
             </div>
         </div>  
-    <fieldset>
-
     </fieldset>
-    <p id="test">sad</p>
-    <p id="remaining_armor">asd</p>
-    <p id="current_armor">dsa</p>
+    <fieldset>
+        <p>Item Debuffs</p>
+        <div class="itemDebuffs">
+            <label>
+                <input id="annihilator" value="600" type="checkbox" name="armorShredder"/>
+                Annihilator (600)
+            </label>
+            <label>
+                <input id="torch" value="50" type="checkbox" name="armorShredder"/>
+                Torch of Holy Flame (50)
+            </label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <p>Personal Buffs</p>
+        <div class="personalBuffs">
+            <div class="trinketBlock">
+            <p>Trinkets (2 Max)</p>
+                <label>
+                    <input id="iconUnyielding" value="600" type="checkbox" class="trinket" name="armorShredderOnActive"/>
+                    Icon of the Unyielding (600)
+                </label>
+                <label>
+                    <input id="madness" value="300" type="checkbox" class="trinket" name="armorShredderOnActive"/>
+                    Madness of the Betrayer (300)
+                </label>
+                <label>
+                    <input id="badgeSwarmguardAQ" value="1200" type="checkbox" class="trinket" name="armorShredderOnActive"/>
+                    Badge of the Swarmguard (1200)
+                </label>
+                <label>
+                    <input id="warpSpringCoilRogue" value="1000" type="checkbox" class="trinket" name="armorShredderOnActive"/>
+                    Warp-Spring Coil (1000) [Rogue only]
+                </label>
+            </div>
+        
+            <div class="enchantAndGear">
+                <p>Enchants</p>
+                <label>
+                <input id="enchantExecutioneer" value="840" type="checkbox" name="armorShredderOnActive"/>
+                Weapon Enchant - Executioner (840)
+                </label>
+                <span id="arprGear">Armor Penetration from Gear: </span><span id="arprGearNumber" val="0">0</span>
+                <label>
+                    <input placeholder="0" value="0" type="text" id="inputArprFromGear" name="armorShredder" />
+                    <input type="submit" value="Submit" id="gearButton" name="gearButton"/>
+                    <input type="button" value="Clear" id="resetButton"/>
+                    <input type="checkbox" class="hidden" name="armorShredder" id="functionHelper" value="0"/>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+    <p id="removed_armor">sad</p>
+    <div class="remainingAndOvercap">
+        <span id="remaining_armor">asd</span> <span id="overcap"></span>
+    </div>
+    <p id="damage_reduction">dsa</p>
 
 
 </body>    

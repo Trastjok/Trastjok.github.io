@@ -18,11 +18,11 @@ label {
 
 fieldset {
     border: none;
-    padding: 2rem 0;
+    padding: 10px 0 2rem;
     border-bottom: 3px solid #3b3b4f;
 }
 
-.raidDebuffs {
+.raidDebuffs, .personalBuffs {
     width: 90%;
     text-align: center;
     justify-content: center;
@@ -31,7 +31,15 @@ fieldset {
     padding-left: 8%;
 }
 
-.sunderExpose {
+.itemDebuffs {
+    width:90%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+.sunderExpose, .trinketBlock {
     width: 30%;
     text-align: left;
 }
@@ -44,4 +52,12 @@ fieldset {
 .faerieFire {
     width: 30%;
     text-align: left;
+}
+
+.remainingAndOvercap {
+    display: inline;
+}
+
+.hidden {
+    display: none;
 }
