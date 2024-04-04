@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script
+			  src="https://code.jquery.com/jquery-3.7.1.min.js"
+			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			  crossorigin="anonymous"></script>
+        <script src="jquery.js"></script>
+        <meta charset="UTF-8">
+        <title>Citas Armor Penetration Calculator TBC</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+<body>
+    
+    <div class="header">
+        <h1>Citas Armor Penetration Calculator TBC</h1>
+    </div>
+    <fieldset>
+        <p>Boss Armor</p>
+        <label for="boss-armor">
+            <select id="boss-armor" name="boss-armor">
+                <option value="6200">6200</option>
+                <option value="7700">7700</option>
+                <option value="8800">8800 (VR)</option>
+            </select>   
+        </label>
+    </fieldset>
+        <p>Standard Raid Debuffs</p>
+        <div class="raidDebuffs">
+            <div class="sunderExpose" style="display: table-cell">
+                <label>
+                    <input id="sunderArmor" value="2600" type="checkbox" name="rogwarr"/>
+                    Sunder Armor (2600)
+                </label>
+                <label>
+                    <input id="impExposeArmor" value="3075" type="checkbox" name="rogwarr"/>
+                    Improved Expose Armor (3075)
+                </label>
+            </div>
+            <div class="cor" style="display: table-cell">
+                <label>
+                    <input id="curseOfReckFour" value="640" type="checkbox" name="cor"/>
+                    Curse of Recklessness (Rank 4) (640)
+                </label>
+                <label>
+                    <input id="curseOfReckFive" value="800" type="checkbox" name="cor"/>
+                    Curse of Recklessness (Rank 5) (800)
+                </label>
+            </div>
+            <div class="faerieFire" style="display: table-cell">
+                <label>
+                    <input id="faerieFire" value="610" type="checkbox" name="faerieFire"/>
+                    Faerie Fire (610)
+                </label>
+            </div>
+        </div>  
+    <fieldset>
+
+    </fieldset>
+    <p id="test">sad</p>
+    <p id="remaining_armor">asd</p>
+    <p id="current_armor">dsa</p>
+
+
+</body>    
+
+</html>
